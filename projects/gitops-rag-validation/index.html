@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <title>GitOps RAG Validation Pipeline | Sanjay Mahanta</title>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="../../assets/css/noscript.css" />
+    </noscript>
+
+</head>
+
+
+<body class="is-preload">
+
+
+<div id="wrapper">
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header id="header">
+
+        <a href="../../index.html"
+           class="logo">
+
+            Sanjay Mahanta
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav id="nav">
+
+        <ul class="links">
+
+            <li>
+
+                <a href="../../index.html">
+
+                    Portfolio Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../../generic.html">
+
+                    About & Skills
+
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <ul class="icons">
+
+            <li>
+
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7461826875972046848/"
+                   target="_blank"
+                   class="icon brands fa-linkedin">
+
+                    <span class="label">
+                        LinkedIn
+                    </span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="https://github.com/sanjaymahanta/llm-evaluation-cicd-pipeline"
+                   target="_blank"
+                   class="icon brands fa-github">
+
+                    <span class="label">
+                        GitHub
+                    </span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <div id="main">
+
+
+        <article class="post">
+
+
+            <!-- =========================
+                 TITLE
+            ========================== -->
+
+            <header class="major">
+
+                <span class="date">
+                    AI Test Automation
+                </span>
+
+
+                <h1>
+
+                    GitOps RAG<br />
+                    Validation Pipeline
+
+                </h1>
+
+
+                <p>
+
+                    Automated CI/CD validation for RAG systems using Giskard and Gemini 2.5 Flash
+
+                </p>
+
+            </header>
+
+
+
+            <!-- PROJECT IMAGE -->
+
+            <span class="image main">
+
+                <img src="../../images/RAG.png"
+                     alt="GitOps RAG Validation Pipeline" />
+
+            </span>
+
+
+
+            <!-- =========================
+                 INTRODUCTION
+            ========================== -->
+
+            <h2>
+                Introduction
+            </h2>
+
+            <p>
+
+                Built an automated GitOps pipeline using GitHub Actions to continuously validate Retrieval-Augmented Generation (RAG) systems. The pipeline intercepts model iterations and prevents hallucinated or ungrounded responses from reaching production.
+
+            </p>
+
+            <p>
+
+                By integrating Giskard's LLM evaluation framework with the Google Gemini 2.5 Flash model acting as an autonomous evaluator, this CI/CD pipeline enforces strict quality gates on AI outputs.
+
+            </p>
+
+
+
+            <!-- =========================
+                 KEY FEATURES
+            ========================== -->
+
+            <h2>
+                Key Features
+            </h2>
+
+            <ol>
+
+                <li>
+                    <strong>LLM-as-a-Judge Evaluation:</strong> Uses Gemini 2.5 Flash as an autonomous evaluator to analyze the RAG system's responses against source context.
+                </li>
+
+                <li>
+                    <strong>Giskard Integration:</strong> Leverages the Giskard open-source framework to generate standardized test suites for LLM outputs.
+                </li>
+
+                <li>
+                    <strong>Hallucination Detection:</strong> Specifically tests for ungrounded hallucinated facts that the RAG model may invent outside of the provided context.
+                </li>
+
+                <li>
+                    <strong>Automated CI/CD Quality Gates:</strong> Integrated directly into GitHub Actions. If the evaluator detects hallucinations or poor retrieval, the build fails and deployment is halted.
+                </li>
+
+            </ol>
+
+
+
+            <!-- =========================
+                 HOW IT WORKS
+            ========================== -->
+
+            <h2>
+                How the Pipeline Works
+            </h2>
+
+            <p>
+
+                Testing LLMs in production requires moving beyond standard unit tests. Because LLM outputs are non-deterministic, traditional assertions often fail. This project uses "LLM-as-a-Judge" mechanics, where a secondary, highly-capable model evaluates the output of the primary RAG system.
+                If the secondary model determines the output is hallucinated, the CI pipeline throws a status failure, preventing the new AI iteration from going live.
+
+            </p>
+
+
+
+            <!-- =========================
+                 TECHNOLOGY
+            ========================== -->
+
+            <h2>
+                Technology Stack
+            </h2>
+
+            <ul>
+
+                <li>
+                    Python
+                </li>
+
+                <li>
+                    Giskard LLM Evaluation Framework
+                </li>
+
+                <li>
+                    Google Gemini 2.5 Flash API
+                </li>
+
+                <li>
+                    GitHub Actions (CI/CD)
+                </li>
+
+                <li>
+                    Retrieval-Augmented Generation (RAG)
+                </li>
+
+            </ul>
+
+
+
+            <!-- =========================
+                 WORKFLOW
+            ========================== -->
+
+            <h2>
+                Workflow
+            </h2>
+
+            <ol>
+
+                <li>
+                    Code/Prompt update pushed to GitHub
+                </li>
+
+                <li>
+                    GitHub Actions pipeline triggers
+                </li>
+
+                <li>
+                    RAG System generates answers to test queries
+                </li>
+
+                <li>
+                    Giskard invokes Gemini 2.5 Flash evaluator
+                </li>
+
+                <li>
+                    Evaluator scores the answers for hallucinations
+                </li>
+
+                <li>
+                    If hallucination detected -> Pipeline FAILS
+                </li>
+
+                <li>
+                    If answers grounded -> Pipeline PASSES
+                </li>
+
+            </ol>
+
+
+
+            <!-- =========================
+                 LINKS
+            ========================== -->
+
+            <ul class="actions special">
+
+                <li>
+
+                    <a href="../../index.html"
+                       class="button">
+
+                        BACK TO PROJECTS
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="https://github.com/sanjaymahanta/llm-evaluation-cicd-pipeline"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="button">
+
+                        VIEW CODE
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7461826875972046848/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="button">
+
+                        VIEW DEMO
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer id="footer">
+
+        <section>
+
+            <section class="split contact">
+
+
+                <section>
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        Pune, India
+                    </p>
+
+                </section>
+
+
+                <section>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+
+                        <a href="mailto:sanjaykmahanta28@gmail.com">
+
+                            sanjaykmahanta28@gmail.com
+
+                        </a>
+
+                    </p>
+
+                </section>
+
+
+                <section>
+
+                    <h3>
+                        Profiles
+                    </h3>
+
+                    <ul class="icons alt">
+
+                        <li>
+
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7461826875972046848/"
+                               target="_blank"
+                               class="icon brands alt fa-linkedin">
+
+                                <span class="label">
+                                    LinkedIn
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="https://github.com/sanjaymahanta/llm-evaluation-cicd-pipeline"
+                               target="_blank"
+                               class="icon brands alt fa-github">
+
+                                <span class="label">
+                                    GitHub
+                                </span>
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+            </section>
+
+        </section>
+
+    </footer>
+
+
+
+    <!-- COPYRIGHT -->
+
+    <div id="copyright">
+
+        <ul>
+
+            <li>
+                &copy; Sanjay Kumar Mahanta
+            </li>
+
+            <li>
+
+                Design:
+
+                <a href="https://html5up.net">
+
+                    HTML5 UP
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- SCRIPTS -->
+
+<script src="../../assets/js/jquery.min.js"></script>
+
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+
+<script src="../../assets/js/browser.min.js"></script>
+
+<script src="../../assets/js/breakpoints.min.js"></script>
+
+<script src="../../assets/js/util.js"></script>
+
+<script src="../../assets/js/main.js"></script>
+
+
+</body>
+
+</html>

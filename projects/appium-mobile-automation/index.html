@@ -1,0 +1,665 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <title>End-to-End Cross-Platform Mobile Automation Framework | Sanjay Mahanta</title>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="../../assets/css/noscript.css" />
+    </noscript>
+
+</head>
+
+
+<body class="is-preload">
+
+
+<div id="wrapper">
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header id="header">
+
+        <a href="../../index.html"
+           class="logo">
+
+            Sanjay Mahanta
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav id="nav">
+
+        <ul class="links">
+
+            <li>
+
+                <a href="../../index.html">
+
+                    Portfolio Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../../generic.html">
+
+                    About & Skills
+
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <ul class="icons">
+
+            <li>
+
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7497889300043366400/"
+                   target="_blank"
+                   class="icon brands fa-linkedin">
+
+                    <span class="label">
+                        LinkedIn
+                    </span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="https://github.com/sanjaymahanta/appiumframework"
+                   target="_blank"
+                   class="icon brands fa-github">
+
+                    <span class="label">
+                        GitHub
+                    </span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <div id="main">
+
+
+        <article class="post">
+
+
+            <!-- =========================
+                 TITLE
+            ========================== -->
+
+            <header class="major">
+
+                <span class="date">
+                    Mobile Automation / QA Engineering
+                </span>
+
+
+                <h1>
+
+                    End-to-End Cross-Platform<br />
+                    Mobile Automation Framework
+
+                </h1>
+
+
+                <p>
+
+                    End-to-End Android & iOS Testing with Appium
+
+                </p>
+
+            </header>
+
+
+
+            <!-- PROJECT IMAGE -->
+
+            <span class="image main">
+
+                <img src="../../images/pic06.jpg"
+                     alt="Appium Mobile Automation Framework" />
+
+            </span>
+
+
+
+                        <!-- =========================
+                 INTRODUCTION
+            ========================== -->
+
+            <h2>
+                Introduction
+            </h2>
+
+            <p>
+                Mobile applications are used across different platforms, but testing Android and iOS separately can increase automation effort, maintenance, and execution time.
+            </p>
+
+            <p>
+                To solve this, I built a cross-platform mobile automation framework that allows the same automation architecture to validate both Android and iOS applications.
+            </p>
+
+            <p>
+                The goal was simple:<br />
+                <strong>Build once, automate both platforms, and execute tests on real devices in the cloud.</strong>
+            </p>
+
+            <p>
+                The framework uses Appium with Java and integrates BrowserStack Real Devices, TestNG, Maven, GitHub, and Jenkins to create an end-to-end mobile testing workflow.
+            </p>
+
+
+
+            <!-- =========================
+                 THE PROBLEM
+            ========================== -->
+
+            <h2>
+                The Problem I Wanted to Solve
+            </h2>
+
+            <p>
+                When a mobile application needs to support both Android and iOS, QA teams can face several challenges:
+            </p>
+
+            <ul>
+                <li>Maintaining separate automation approaches for different platforms</li>
+                <li>Managing different devices and OS versions</li>
+                <li>Repeating similar test scenarios</li>
+                <li>Increasing test-maintenance effort</li>
+                <li>Limited access to physical devices</li>
+                <li>Difficulty running tests consistently across multiple device configurations</li>
+            </ul>
+
+            <p>
+                Instead of treating Android and iOS automation as completely separate projects, I designed a framework that shares the common automation logic while handling platform-specific requirements separately.
+            </p>
+
+
+
+            <!-- =========================
+                 THE SOLUTION
+            ========================== -->
+
+            <h2>
+                The Solution
+            </h2>
+
+            <p>
+                The framework provides a single automation architecture for both platforms.
+            </p>
+
+            <p>
+                The tester can select the target platform, and the framework loads the appropriate configuration and capabilities for that environment.
+            </p>
+
+            <p>
+                This means the same framework can execute:<br />
+                <strong>Android ? BrowserStack Real Device</strong><br />
+                and<br />
+                <strong>iOS ? BrowserStack Real Device</strong><br />
+                while keeping platform-specific configuration isolated.
+            </p>
+
+
+
+            <!-- =========================
+                 WHY THIS APPROACH?
+            ========================== -->
+
+            <h2>
+                Why This Approach?
+            </h2>
+
+            <p>
+                The biggest advantage is reusability.
+            </p>
+
+            <p>
+                Instead of creating two completely independent automation frameworks for Android and iOS, common test logic can be reused wherever the application behavior is the same.
+            </p>
+
+            <p>
+                This can help reduce:
+            </p>
+
+            <ul>
+                <li>Duplicate automation code</li>
+                <li>Maintenance effort</li>
+                <li>Test-development effort</li>
+                <li>Platform switching complexity</li>
+            </ul>
+
+            <p>
+                At the same time, Android and iOS differences are handled through platform-specific configuration rather than forcing everything into one identical implementation.
+            </p>
+
+
+
+            <!-- =========================
+                 EXECUTION FLOW
+            ========================== -->
+
+            <h2>
+                What Happens When a Test Runs?
+            </h2>
+
+            <p>
+                The execution flow is:<br />
+                <strong>Select Platform ? Load Configuration ? Start Appium Session ? Connect to BrowserStack ? Execute Tests ? Generate Results</strong>
+            </p>
+
+            <p>
+                <strong>Android:</strong><br />
+                Android ? Capabilities ? Appium ? BrowserStack ? Test Execution ? Results
+            </p>
+
+            <p>
+                <strong>iOS:</strong><br />
+                iOS ? Capabilities ? Appium ? BrowserStack ? Test Execution ? Results
+            </p>
+
+
+
+            <!-- =========================
+                 REAL-DEVICE TESTING
+            ========================== -->
+
+            <h2>
+                Real-Device Testing
+            </h2>
+
+            <p>
+                One important problem with mobile automation is that testing only on an emulator or simulator does not always represent real-user conditions.
+            </p>
+
+            <p>
+                To address this, the framework integrates BrowserStack Real Devices, allowing tests to run against different mobile environments without requiring the team to maintain a physical device lab.
+            </p>
+
+            <p>
+                This makes it easier to validate the application across different:
+            </p>
+
+            <ul>
+                <li>Devices</li>
+                <li>OS versions</li>
+                <li>Screen sizes</li>
+                <li>Mobile environments</li>
+            </ul>
+
+
+
+            <!-- =========================
+                 ANDROID & iOS SUPPORT
+            ========================== -->
+
+            <h2>
+                Android & iOS Support
+            </h2>
+
+            <p>
+                The framework dynamically loads the required configuration depending on the selected platform.
+            </p>
+
+            <p>
+                For Android, the framework handles Android-specific device and application capabilities.
+            </p>
+
+            <p>
+                For iOS, it handles the corresponding iOS configuration.
+            </p>
+
+            <p>
+                This keeps platform-specific differences isolated while allowing the core automation architecture to remain reusable.
+            </p>
+
+
+
+            <!-- =========================
+                 CI/CD AUTOMATION
+            ========================== -->
+
+            <h2>
+                CI/CD Automation
+            </h2>
+
+            <p>
+                The framework is connected to Jenkins and GitHub, allowing mobile tests to become part of a continuous testing workflow.
+            </p>
+
+            <p>
+                Test execution can be triggered through the CI/CD pipeline rather than requiring a tester to manually run the complete suite every time.
+            </p>
+
+            <p>
+                This makes mobile testing more suitable for continuous delivery environments.
+            </p>
+
+
+
+            <!-- =========================
+                 TECHNOLOGY STACK
+            ========================== -->
+
+            <h2>
+                Technology Stack
+            </h2>
+
+            <ul>
+                <li>Java</li>
+                <li>Appium</li>
+                <li>Appium Inspector</li>
+                <li>BrowserStack Real Devices</li>
+                <li>TestNG</li>
+                <li>Maven</li>
+                <li>GitHub</li>
+                <li>Jenkins</li>
+                <li>Android</li>
+                <li>iOS</li>
+            </ul>
+
+
+
+            <!-- =========================
+                 PROJECT IMPACT
+            ========================== -->
+
+            <h2>
+                Project Impact
+            </h2>
+
+            <p>
+                The main objective of this framework was to make mobile automation more reusable, scalable, and easier to maintain.
+            </p>
+
+            <p>
+                Instead of asking:<br />
+                <em>"Do we need a completely separate automation framework for Android and iOS?"</em>
+            </p>
+
+            <p>
+                The approach becomes:<br />
+                <em>"How much of our automation can we reuse across both platforms while isolating only the platform-specific differences?"</em>
+            </p>
+
+            <p>
+                This architecture provides a foundation for expanding the test suite and adding more devices and OS combinations without redesigning the entire framework.
+            </p>
+
+
+
+            <!-- =========================
+                 PROJECT HIGHLIGHTS
+            ========================== -->
+
+            <h2>
+                Project Highlights
+            </h2>
+
+            <ul>
+                <li>One automation architecture for Android & iOS</li>
+                <li>Reusable automation logic</li>
+                <li>Real-device cloud execution</li>
+                <li>Platform-specific configuration</li>
+                <li>Jenkins CI/CD integration</li>
+                <li>End-to-end mobile test automation</li>
+                <li>Scalable for additional devices and test cases</li>
+            </ul>
+
+
+
+            <!-- =========================
+                 FINAL PROJECT STATEMENT
+            ========================== -->
+
+            <h2>
+                Final Statement
+            </h2>
+
+            <p>
+                Built to answer a simple QA challenge:<br />
+                <strong>"Can one automation framework reliably test both Android and iOS?"</strong>
+            </p>
+
+            <p>
+                The answer is yes. 🚀
+            </p>
+
+            <!-- =========================
+                 LINKS
+            ========================== -->
+
+            <ul class="actions special">
+
+                <li>
+
+                    <a href="../../index.html"
+                       class="button">
+
+                        BACK TO PROJECTS
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="https://github.com/sanjaymahanta/appiumframework"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="button">
+
+                        VIEW CODE
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7497889300043366400/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="button">
+
+                        VIEW DEMO
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer id="footer">
+
+        <section>
+
+            <section class="split contact">
+
+
+                <section>
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        Pune, India
+                    </p>
+
+                </section>
+
+
+                <section>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+
+                        <a href="mailto:sanjaykmahanta28@gmail.com">
+
+                            sanjaykmahanta28@gmail.com
+
+                        </a>
+
+                    </p>
+
+                </section>
+
+
+                <section>
+
+                    <h3>
+                        Profiles
+                    </h3>
+
+                    <ul class="icons alt">
+
+                        <li>
+
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7497889300043366400/"
+                               target="_blank"
+                               class="icon brands alt fa-linkedin">
+
+                                <span class="label">
+                                    LinkedIn
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="https://github.com/sanjaymahanta/appiumframework"
+                               target="_blank"
+                               class="icon brands alt fa-github">
+
+                                <span class="label">
+                                    GitHub
+                                </span>
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+            </section>
+
+        </section>
+
+    </footer>
+
+
+
+    <!-- COPYRIGHT -->
+
+    <div id="copyright">
+
+        <ul>
+
+            <li>
+                &copy; Sanjay Kumar Mahanta
+            </li>
+
+            <li>
+
+                Design:
+
+                <a href="https://html5up.net">
+
+                    HTML5 UP
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- SCRIPTS -->
+
+<script src="../../assets/js/jquery.min.js"></script>
+
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+
+<script src="../../assets/js/browser.min.js"></script>
+
+<script src="../../assets/js/breakpoints.min.js"></script>
+
+<script src="../../assets/js/util.js"></script>
+
+<script src="../../assets/js/main.js"></script>
+
+
+</body>
+
+</html>
+

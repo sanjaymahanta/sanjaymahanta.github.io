@@ -1,0 +1,570 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <title>AI-Powered Self-Healing Selenium Framework | Sanjay Mahanta</title>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="../../assets/css/noscript.css" />
+    </noscript>
+
+</head>
+
+
+<body class="is-preload">
+
+
+<div id="wrapper">
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header id="header">
+
+        <a href="../../index.html"
+           class="logo">
+
+            Sanjay Mahanta
+
+        </a>
+
+    </header>
+
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav id="nav">
+
+        <ul class="links">
+
+            <li>
+
+                <a href="../../index.html">
+
+                    Portfolio Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="../../generic.html">
+
+                    About & Skills
+
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <ul class="icons">
+
+            <li>
+
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7425977616362541056/"
+                   target="_blank"
+                   class="icon brands fa-linkedin">
+
+                    <span class="label">
+                        LinkedIn
+                    </span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="https://github.com/sanjaymahanta/AI-Powered-Self-Healing-Selenium"
+                   target="_blank"
+                   class="icon brands fa-github">
+
+                    <span class="label">
+                        GitHub
+                    </span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <div id="main">
+
+
+        <article class="post">
+
+
+            <!-- =========================
+                 TITLE
+            ========================== -->
+
+            <header class="major">
+
+                <span class="date">
+                    AI-Driven Automation
+                </span>
+
+
+                <h1>
+
+                    AI-Powered Self-Healing<br />
+                    Selenium Framework
+
+                </h1>
+
+
+                <p>
+
+                    Autonomous Selenium Automation with AI-Powered Locator Recovery
+
+                </p>
+
+            </header>
+
+
+
+            <!-- PROJECT IMAGE -->
+
+            <span class="image main">
+
+                <img src="../../images/SelfHealing_Selenium.png"
+                     alt="AI Self Healing Selenium Framework" />
+
+            </span>
+
+
+
+            <!-- =========================
+                 INTRODUCTION
+            ========================== -->
+
+            <h2>
+                Introduction
+            </h2>
+
+            <p>
+
+                Built an AI-powered self-healing automation framework using Java, Selenium, and Google Gemini 2.5 Flash to reduce test maintenance caused by broken and flaky locators.
+
+            </p>
+
+            <p>
+
+                The framework automatically detects locator failures, analyzes the live DOM, asks the LLM to identify a better locator, validates the result using a confidence score, and continues execution without requiring manual locator updates.
+
+            </p>
+
+
+
+            <!-- =========================
+                 KEY FEATURES
+            ========================== -->
+
+            <h2>
+                Key Features
+            </h2>
+
+            <ol>
+
+                <li>
+                    <strong>Intent-Based Testing:</strong> Instead of relying only on brittle XPath expressions, the framework can use natural-language intent such as <em>"The orange login button"</em>. The AI uses the available page information and DOM structure to identify the appropriate element.
+                </li>
+
+                <li>
+                    <strong>CSS Selector Optimization:</strong> The framework uses CSS selectors for improved performance and compatibility with modern JavaScript-heavy applications and Shadow DOM scenarios.
+                </li>
+
+                <li>
+                    <strong>AI-Powered Self-Healing:</strong> When an existing locator fails, the framework intercepts the failure and analyzes the live DOM to identify an alternative locator.
+                </li>
+
+                <li>
+                    <strong>Confidence Score:</strong> The LLM provides a confidence score from 0-100 for the proposed healed locator. The framework uses this score to help ensure that the AI-generated locator is reliable before continuing execution.
+                </li>
+                
+                <li>
+                    <strong>Seamless Recovery:</strong> The framework automatically detects the failure, analyzes the DOM, generates a replacement locator and attempts recovery during test execution.
+                </li>
+
+            </ol>
+
+
+
+            <!-- =========================
+                 HOW SELF-HEALING WORKS
+            ========================== -->
+
+            <h2>
+                How Self-Healing Works
+            </h2>
+
+            <p>
+
+                Test maintenance is one of the most time-consuming aspects of UI automation. When developers change UI elements, static locators often break, causing false-positive test failures.
+                This project focuses on solving test-maintenance and flaky-locator problems using Java, Selenium and Google Gemini 2.5 Flash.
+
+            </p>
+
+
+
+            <!-- =========================
+                 TECHNOLOGY
+            ========================== -->
+
+            <h2>
+                Technology Stack
+            </h2>
+
+            <ul>
+
+                <li>
+                    Java
+                </li>
+
+                <li>
+                    Selenium WebDriver
+                </li>
+
+                <li>
+                    Google Gemini 2.5 Flash API
+                </li>
+
+                <li>
+                    OkHttp
+                </li>
+
+                <li>
+                    Maven
+                </li>
+
+                <li>
+                    CSS Selectors
+                </li>
+                
+                <li>
+                    LLM-based reasoning
+                </li>
+
+            </ul>
+
+
+
+            <!-- =========================
+                 WORKFLOW
+            ========================== -->
+
+            <h2>
+                Workflow
+            </h2>
+
+            <ol>
+
+                <li>
+                    Test Execution
+                </li>
+
+                <li>
+                    Locator Failure
+                </li>
+
+                <li>
+                    Failure Interception
+                </li>
+
+                <li>
+                    Live DOM Analysis
+                </li>
+
+                <li>
+                    Gemini LLM Reasoning
+                </li>
+
+                <li>
+                    New Locator Generation
+                </li>
+
+                <li>
+                    Confidence Score Validation
+                </li>
+
+                <li>
+                    Healed Locator
+                </li>
+
+                <li>
+                    Test Execution Continues
+                </li>
+
+            </ol>
+            
+            
+            
+            <!-- =========================
+                 PROJECT HIGHLIGHTS
+            ========================== -->
+
+            <h2>
+                Project Highlights
+            </h2>
+
+            <ul>
+
+                <li>
+                    Autonomous locator recovery
+                </li>
+
+                <li>
+                    AI/LLM-based element identification
+                </li>
+
+                <li>
+                    Intent-based element descriptions
+                </li>
+
+                <li>
+                    Confidence-based validation
+                </li>
+
+                <li>
+                    Reduced test maintenance
+                </li>
+
+                <li>
+                    Designed for modern JavaScript-heavy web applications
+                </li>
+
+                <li>
+                    Selenium-based automation framework
+                </li>
+                
+            </ul>
+            
+            <p><em>*Concept inspired by the self-healing approach shared by Raghav Mishra.</em></p>
+
+
+
+            <!-- =========================
+                 LINKS
+            ========================== -->
+
+            <ul class="actions special">
+
+                <li>
+
+                    <a href="../../index.html"
+                       class="button">
+
+                        +? Back to Projects
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="https://github.com/sanjaymahanta/AI-Powered-Self-Healing-Selenium"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="button">
+
+                        VIEW CODE
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7425977616362541056/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="button">
+
+                        VIEW DEMO
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer id="footer">
+
+        <section>
+
+            <section class="split contact">
+
+
+                <section>
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        Pune, India
+                    </p>
+
+                </section>
+
+
+                <section>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+
+                        <a href="mailto:sanjaykmahanta28@gmail.com">
+
+                            sanjaykmahanta28@gmail.com
+
+                        </a>
+
+                    </p>
+
+                </section>
+
+
+                <section>
+
+                    <h3>
+                        Profiles
+                    </h3>
+
+                    <ul class="icons alt">
+
+                        <li>
+
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7425977616362541056/"
+                               target="_blank"
+                               class="icon brands alt fa-linkedin">
+
+                                <span class="label">
+                                    LinkedIn
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="https://github.com/sanjaymahanta/AI-Powered-Self-Healing-Selenium"
+                               target="_blank"
+                               class="icon brands alt fa-github">
+
+                                <span class="label">
+                                    GitHub
+                                </span>
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+            </section>
+
+        </section>
+
+    </footer>
+
+
+
+    <!-- COPYRIGHT -->
+
+    <div id="copyright">
+
+        <ul>
+
+            <li>
+                &copy; Sanjay Kumar Mahanta
+            </li>
+
+            <li>
+
+                Design:
+
+                <a href="https://html5up.net">
+
+                    HTML5 UP
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- SCRIPTS -->
+
+<script src="../../assets/js/jquery.min.js"></script>
+
+<script src="../../assets/js/jquery.scrollex.min.js"></script>
+
+<script src="../../assets/js/jquery.scrolly.min.js"></script>
+
+<script src="../../assets/js/browser.min.js"></script>
+
+<script src="../../assets/js/breakpoints.min.js"></script>
+
+<script src="../../assets/js/util.js"></script>
+
+<script src="../../assets/js/main.js"></script>
+
+
+</body>
+
+</html>
